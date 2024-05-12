@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body {
+    background-color: black;
+}
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    width: 100%;
+}
+.navPC {
+    display: flex;
+    height: 20%;
+    padding: 20px;
+}
+.navPC a {
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.navPC p {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+.navR {
+    display: none;
+}
+@media only screen and (max-width: 800px) {
+    div.navPC {
+        display: none;
+    }
+    div.navR {
+        display: block;
+    }
+    div.img p {
+        font-size: 45px;
+    }
+}
+a {
+    text-decoration: none;
+}
+.navPC a:hover {
+    color: rgb(16, 171, 222);
+}
+.navbar h3 {
+    padding: 20px;
+    float: right;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+#navbody {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.892);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+    z-index: 2;
+}
+.navmenu {
+    max-width: 300px;
+    min-height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.navmenu a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 18px;
+    transition: 0.3s ease-in-out;
+}
+.navmenu a:hover {
+    color: rgb(16, 171, 222);
+}
+.navmenu p {
+    font-weight: 500;
+}
+#navbody h3 {
+    padding: 20px;
+    float: right;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+#activeNav {
+    color: rgb(16, 171, 222);
+}
+a {
+    text-decoration: none;
+}
+
+
+
+.mainContent {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.card {
+    color: white;
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+    max-width: 200px;
+    max-height: 280px;
+    border-radius: 5%;
+    padding: 80px 40px 30px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+#card1 {
+    background-image: url(image5.jpg);
+}
+#card2 {
+    background-image: url(image3.jpg);
+}
+#card3 {
+    background-image: url(image6.jpg);
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-content {
+    line-height: 1.6;
+    transform: translateY(280px);
+    transition: transform ease-in-out 500ms;
+}
+.card:hover .card-content {
+    transform: translateY(0);
+}
+.card-title {
+    position: relative;
+    font-size: 20px;
+}
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: -38px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(16, 171, 222);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+}
+.card:hover .card-title::after {
+    transform: scaleX(1);
+}
+.card-body {
+    font-size: 13px;
+}
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(16, 171, 222);
+    padding: 10px;
+    border-radius: 5%;
+    transition: background-color ease-in-out 500ms;
+}
+.button:hover, .button:focus {
+    background-color: white;
+}
+.hidden-content {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    transition: opacity 0.5s ease-in-out;
+    flex-direction: column;
+}
+#hidden-content1 {
+    display: none;
+    opacity: 0;
+}
+#hidden-content2 {
+    display: none;
+    opacity: 0;
+}
+#hidden-content3 {
+    display: none;
+    opacity: 0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.container > div:nth-child(1){
+    background-color: white;
+    padding: 20px 20px 50px 20px;
+    border-radius: 2%;
+}
+.container > div:nth-child(2) {
+    color: white;
+    max-width: 600px;
+    font-size: 20px;
+    font-family: "Ysabeau Infant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+.container > div:nth-child(2) p {
+    text-align: justify;
+}
+.containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.containers div{
+    color: white;
+    max-width: 800px;
+    font-size: 20px;
+    font-family: "Ysabeau Infant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    padding: 20px;
+}
+.containers div p {
+    text-align: justify;
+}
+.buttonz {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.real {
+    width: 160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+.real h3 {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5%;
+    transition: ease-in-out 0.5s;
+}
+.real h3:hover {
+    border-color: rgb(16, 171, 222);
+    color: rgb(16, 171, 222);
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.footer div {
+    color: white;
+    font-family: "Ysabeau Infant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+}
+
+.footer a {
+    padding: 10px;
+}
+
+.footer img {
+    max-width: 40px;
+    opacity: 40%;
+    transition: ease-in-out 0.5s;
+}
+.footer img:hover {
+    opacity: 100%;
+}
+@media only screen and (max-width: 310px) {
+    div.footer>div:nth-child(2) {
+        font-size: 14px;
+    }
+}
+.img {
+    background-image: url(DEEZ.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img p {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}

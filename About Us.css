@@ -1,0 +1,245 @@
+/*Styles*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body {
+    background-color: black;
+}
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    width: 100%;
+}
+.navPC {
+    display: flex;
+    height: 20%;
+    padding: 20px;
+}
+.navPC a {
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.navPC a:hover {
+    color: rgb(16, 171, 222);
+}
+.navPC p {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+.navR {
+    display: none;
+}
+.navbar h3 {
+    padding: 20px;
+    float: right;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+    div.navPC {
+        display: none;
+    }
+    div.navR {
+        display: block;
+    }
+    div.img p {
+        font-size: 45px;
+    }
+}
+#navbody {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.892);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+    z-index: 2;
+}
+.navmenu {
+    max-width: 300px;
+    min-height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.navmenu a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 18px;
+    transition: 0.3s ease-in-out;
+}
+.navmenu a:hover {
+    color: rgb(16, 171, 222);
+}
+.navmenu p {
+    font-weight: 500;
+}
+#navbody h3 {
+    padding: 20px;
+    float: right;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+#activeNav {
+    color: rgb(16, 171, 222);
+    opacity: 100%;
+}
+a {
+    text-decoration: none;
+}
+/* Start of Body Code */
+.img {
+    background-image: url(sunsets.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img p {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+.mainContent {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container > div:nth-child(2) {
+    max-width: 700px;
+    margin-left: 80px;
+    margin-right: 80px;
+    color: white;
+    text-align: justify;
+
+}
+.container h1 {
+    font-family: "Wire One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.container p {
+    font-family: "Ysabeau Infant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20px;
+}
+.container div {
+    margin-top: 250px;
+}
+@media only screen and (max-width: 928px) {
+    div.container {
+        flex-direction: column;
+    }
+    div.container> div:nth-child(1) img {
+        width: 200px;
+    }
+    div.container div {
+        margin-top: 50px;
+    }
+    div.container div:nth-child(2) h1 {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 768px) {
+    div.container> div:nth-child(2) {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    div.container>div:nth-child(2)p {
+        font-size: 12px;
+    }
+}
+.real {
+    width: 160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    margin-top: 80px;
+}
+.real h3 {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5%;
+    transition: ease-in-out 0.5s;
+}
+.real h3:hover {
+    border-color: rgb(16, 171, 222);
+    color: rgb(16, 171, 222);
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.footer div {
+    color: white;
+    font-family: "Ysabeau Infant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+}
+
+.footer a {
+    padding: 10px;
+}
+
+.footer img {
+    max-width: 40px;
+    opacity: 40%;
+    transition: ease-in-out 0.5s;
+}
+.footer img:hover {
+    opacity: 100%;
+}
+@media only screen and (max-width: 310px) {
+    div.footer>div:nth-child(2) {
+        font-size: 14px;
+    }
+}
